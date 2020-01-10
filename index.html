@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>データの受け取り</title>
+</head>
+
+<body>
+	<!-- actionでデータ送り先のPHPファイルを指定、methodで入力データの受け渡し方 -->
+	<h3>特殊文字を表示させる</h3>
+	<form action="index.php" method="post">
+		<p>&lt;br&gt;を表示させる</p>
+		<input type="text" name="comment1">
+		<input type="submit" value="表示">
+		
+		<p>ワダ&#39;77を表示させる</p>
+		<input type="text" name="comment2">
+		<input type="submit" value="表示">
+		
+		<p>ワダ&quot;77を表示させる</p>
+		<input type="text" name="comment3">
+		<input type="submit" value="表示">
+
+	</form>
+</body>
+
+</html>
