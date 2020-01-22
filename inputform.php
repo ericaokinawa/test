@@ -10,20 +10,21 @@
         <h3>会員登録ページ</h3>
 
         <form action="index.php" method="post">
-
                 <label for="user_name">名前（フリガナ）</label>
-                        <input type="text" name="user_name" id="name" maxlength="255" value="">
+                        <input type="text" name="user_name" id="name" maxlength="18" value="">
                         <input type="submit" name="submit_user_name">
                         <p><?php user_name(); ?></p>
-                        <p><?php input_completed_user_name(); ?></p>
-                <br>
-                <label for="address">住所</label>
+                        <!-- <p><?php input_completed_user_name(); ?></p> -->
+
+
+                <label for="user_address">住所</label>
                         <input type="text" name="user_address" id="address" maxlength="255" value="">
                         <input type="submit" name="submit_user_address">
                         <p><?php user_address(); ?></p>
                         <p><?php input_completed_user_address(); ?></p>
-                <br>
+
         </form>
+
 
       <!--   <form action="data.php" method="post">
                 <label for="other">備考欄</label>
