@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        <meta charset="utf-8">
+        <title>確認画面</title>
+</head>
+
+<body>
+        <!-- actionでデータ送り先のPHPファイルを指定、methodで入力データの受け渡し方 -->
+        <h3>確認画面</h3>
+
+        <form action="index.php" method="post">
+                <table border="1">
+                        <tr>
+                                <th>名前（フリガナ）</th>
+                                <td><?php user_name(); ?>
+                                    <input type="hidden" name="input_completed_user_name" value="">
+                                </td>
+                                <p><?php submit_user_name(); ?></p>
+                        </tr>
+                        <tr>
+                                <th>住所</th>
+                                <td><?php submit_user_address(); ?></td>
+                        </tr>
+                        <tr>
+                                <th>備考</th>
+                                <td><?php submit_user_other(); ?></td>
+                        </tr>
+                </table>
+       
+        </form>
+         <button type="button" onclick="history.back()">戻る</button>
+        <a href="inputform.php"><input type="submit" name="completed_data" value="完了"></a>
+       
+
+  
+</body>
+</html>
