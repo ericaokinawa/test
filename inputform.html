@@ -6,7 +6,6 @@
 </head>
 
 <body>
-        <!-- actionでデータ送り先のPHPファイルを指定、methodで入力データの受け渡し方 -->
         <h3>会員登録ページ</h3>
 
         <form action="index.php" method="post">
@@ -14,8 +13,7 @@
                         <input type="text" name="user_name" id="name" maxlength="18" value="">
                         <input type="submit" name="submit_user_name">
                         <p><?php user_name(); ?></p>
-                        <!-- <p><?php input_completed_user_name(); ?></p> -->
-
+                        <p><?php input_completed_user_name(); ?></p>
 
                 <label for="user_address">住所</label>
                         <input type="text" name="user_address" id="address" maxlength="255" value="">
@@ -26,12 +24,14 @@
         </form>
 
 
-      <!--   <form action="data.php" method="post">
-                <label for="other">備考欄</label>
-                        <textarea name="other" id="other" row="5" cols="50"></textarea>
-                        <input type="submit" name="submit_other">
-                        <input type="hidden" name="other_hidden">
-        </form> -->
+        <form action="index.php" method="post">
+                <label for="user_notes">備考欄</label>
+                        <textarea name="user_notes" id="other" row="5" cols="50"></textarea>
+                        <input type="submit" name="submit_user_notes">
+                        <p><?php user_notes(); ?></p>
+                        <p><?php input_completed_user_notes(); ?></p>
+                      
+        </form>
 
 <!-- <p><?php echo "入力完了<br>".$data_in; ?></p> -->
 
