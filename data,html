@@ -6,7 +6,6 @@
 </head>
 
 <body>
-        <!-- actionでデータ送り先のPHPファイルを指定、methodで入力データの受け渡し方 -->
         <h3>確認画面</h3>
 
         <form action="index.php" method="post">
@@ -25,18 +24,24 @@
                                 </td>
                                 <p><?php submit_user_address(); ?></p>
                         </tr>
-                        <!-- <tr>
+                        <tr>
                                 <th>備考</th>
-                                <td><?php submit_user_other(); ?></td>
-                        </tr> -->
+                                <td><?php user_notes(); ?>
+                                    <input type="hidden" name="input_completed_user_notes" value="">
+                                </td>
+                                <p><?php submit_user_notes(); ?></p>
+                        </tr>
                 </table>
+
+                <button type="button" onclick="history.back()">戻る</button>
+                <!-- <a href="inputform.html"> -->
+                    <input type="submit" name="compleets_data" value="完了">
+                <!-- </a> -->
        
         </form>
-         <button type="button" onclick="history.back()">戻る</button>
-        <a href="inputform.php"><input type="submit" name="completed_data" value="完了"></a>
+        
        
 
   
 </body>
 </html>
-
