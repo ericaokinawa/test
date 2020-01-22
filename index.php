@@ -53,14 +53,14 @@ function input_completed_user_name() {
     }
 }
 
-function input_completed_user_address() {
-    $input_completed_user_address = htmlspecialchars($_POST["input_completed_user_address"],ENT_QUOTES, 'UTF-8');
-    if ($input_completed_user_address){
-        echo $user_address;
-    } else {
+// function input_completed_user_address() {
+//     $input_completed_user_address = htmlspecialchars($_POST["input_completed_user_address"],ENT_QUOTES, 'UTF-8');
+//     if ($input_completed_user_address){
+//         echo $user_address;
+//     } else {
 
-    }
-}
+//     }
+// }
 
 
 // ボタン判別確認
@@ -72,13 +72,13 @@ function submit_user_name() {
     }
 }
 
-function submit_user_address() {
-    if ($_POST['submit_user_address']){
-        echo '名前の送信ボタンが押されました！';
-    } else {
+// function submit_user_address() {
+//     if ($_POST['submit_user_address']){
+//         echo '名前の送信ボタンが押されました！';
+//     } else {
 
-    }
-}
+//     }
+// }
 
 
 
