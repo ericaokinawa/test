@@ -20,12 +20,15 @@
                         </tr>
                         <tr>
                                 <th>住所</th>
-                                <td><?php submit_user_address(); ?></td>
+                                <td><?php user_address(); ?>
+                                    <input type="hidden" name="input_completed_user_address" value="">
+                                </td>
+                                <p><?php submit_user_address(); ?></p>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                                 <th>備考</th>
                                 <td><?php submit_user_other(); ?></td>
-                        </tr>
+                        </tr> -->
                 </table>
        
         </form>
@@ -36,3 +39,4 @@
   
 </body>
 </html>
+
