@@ -1,47 +1,41 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-        <meta charset="utf-8">
-        <title>確認画面</title>
+	<meta charset="utf-8">
+	<title>確認画面</title>
 </head>
 
 <body>
-        <h3>確認画面</h3>
+	<!-- actionでデータ送り先のPHPファイルを指定、methodで入力データの受け渡し方 -->
+	<h3>確認画面</h3>
+	<form action="index.php" method="post">
+		<table border="1">
+		<tr>
+			<th>名前（フリガナ）</th>
+			<td><?php user_name(); ?>
+			<input type="hidden" name="input_completed_user_name" value="<?php user_name(); ?>">
+			</td>
+		</tr>
+		<tr>
+			<th>住所</th>
+			<td><?php user_address(); ?>
+			<input type="hidden" name="input_completed_user_address" value="">
+			</td>
+		</tr>
 
-        <form action="index.php" method="post">
-                <table border="1">
-                        <tr>
-                                <th>名前（フリガナ）</th>
-                                <td><?php user_name(); ?>
-                                    <input type="hidden" name="input_completed_user_name" value="">
-                                </td>
-                                <p><?php submit_user_name(); ?></p>
-                        </tr>
-                        <tr>
-                                <th>住所</th>
-                                <td><?php user_address(); ?>
-                                    <input type="hidden" name="input_completed_user_address" value="">
-                                </td>
-                                <p><?php submit_user_address(); ?></p>
-                        </tr>
-                        <tr>
-                                <th>備考</th>
-                                <td><?php user_notes(); ?>
-                                    <input type="hidden" name="input_completed_user_notes" value="">
-                                </td>
-                                <p><?php submit_user_notes(); ?></p>
-                        </tr>
-                </table>
+		<tr>
+			<th>備考</th>
+			<td><?php user_notes(); ?>
+			<input type="hidden" name="input_completed_user_notes" value="">
+			</td>
+		</tr>
 
-                <button type="button" onclick="history.back()">戻る</button>
-                <!-- <a href="inputform.html"> -->
-                    <input type="submit" name="compleets_data" value="完了">
-                <!-- </a> -->
-       
-        </form>
-        
-       
+		</table>
+		<a href="inputform.html">
+			<input type="button" name="goback" value="戻る">
+			<input type="button" name="compleets_data" value="完了">
+		</a>
+	</form>
 
-  
 </body>
 </html>
